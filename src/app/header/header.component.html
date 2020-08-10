@@ -10,10 +10,12 @@
         <li routerLinkActive="active" *ngIf="!isAuthenticate"><a routerLink="/auth">Authenticate</a></li>
         <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="isAuthenticate">
           <a style="cursor: pointer;" (click)="onLogout()">Logout</a>
         </li>
+
         <li class="dropdown" appDropdown *ngIf="isAuthenticate">
           <a style="cursor: pointer;" class="dropdown-toggle" role="button">
             Manage
@@ -23,8 +25,10 @@
             <li><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
             <li><a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a></li>
           </ul>
+
         </li>
       </ul>
+
     </div>
   </div>
 </nav>
